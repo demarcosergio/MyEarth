@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "myEarthpublish",
+    "slug": "myEarth",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/earthAmbassadeurs_logo.png",
+    "splash": {
+      "image": "./assets/earthAmbassadeurs_logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/earthAmbassadeurs_logo.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "m.yEarth"
+    },
+    "web": {
+      "favicon": "./assets/earthAmbassadeurs_logo.png"
+    },
+    "description": ""
+  }
+}
