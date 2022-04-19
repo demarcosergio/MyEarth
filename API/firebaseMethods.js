@@ -4,6 +4,7 @@ import { Alert } from "react-native";
 
 const firebase = require("firebase");
 require("firebase/firestore");
+import { showMessage, hideMessage } from "react-native-flash-message";
 export async function registration(
   email,
   password,
@@ -86,6 +87,7 @@ export async function pre_questionaire(
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("registration error", err.message);
   }
@@ -106,10 +108,19 @@ export async function level_one_two_db(answerOne, answerTwo, answerThree) {
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
 }
+function showSuccessMessage() {
+  showMessage({
+    message: "Succcess",
+    description: "The answer was saved",
+    type: "success",
+  });
+}
+
 export async function level_two_one_db(
   answerOne,
   answerTwo,
@@ -134,6 +145,7 @@ export async function level_two_one_db(
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -153,6 +165,7 @@ export async function level_two_two_db(answerOne) {
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -184,6 +197,7 @@ export async function level_two_three_db(
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -202,6 +216,7 @@ export async function level_three_db(answerOne) {
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -221,6 +236,7 @@ export async function level_four_db(answerOne, answerTwo) {
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -241,6 +257,7 @@ export async function level_S_one_db(answerOne, answerTwo) {
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -260,6 +277,7 @@ export async function level_S_two_db(answerOne) {
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -288,6 +306,7 @@ export async function level_G_one_db(
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -316,6 +335,7 @@ export async function level_G_two_db(
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -345,6 +365,7 @@ export async function level_P_one_db(
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("submission error", err.message);
   }
@@ -385,6 +406,7 @@ export async function post_questionaire(
       firstName: f_name,
       lastName: l_name,
     });
+    showSuccessMessage();
   } catch (err) {
     Alert.alert("registration error", err.message);
   }
